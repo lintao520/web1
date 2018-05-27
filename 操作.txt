@@ -1,0 +1,22 @@
+Git 版本控制工作流程
+
+设置用户名和邮箱，第一个命令查看设置信息，如已设置可以省略此步这里的用户名是 GitHub 的账号，邮箱是 GitHub 的绑定邮箱
+git config --list
+git config --global user.name ""
+git config --global user.email ""  
+在 GitHub 账号中创建一个新仓库
+克隆远程仓库到本地
+git clone https://github.com/username/仓库名 
+查看仓库中文件的状态
+git status  
+cd 寻找文件
+touch  a.txt 在文件中创建一个文本文件
+git add +文件("git add ."=>所有文件） 添加文件到暂存区
+git rm+文件    删除文件
+将暂存区的更改提交到本地仓库
+git commit -m "message" (字符串里的内容任意)
+将本地仓库的更改同步到远程仓库（即自己 GitHub 中）
+git push (origin master)  (括号里的内容可省略)
+push 时需要输入用户名和密码，先运行下面的命令，可以记录密码，以后 push 可以免密
+git config --global credential.helper store  
+git pull  把远程拉取到本地
